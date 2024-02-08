@@ -7,9 +7,7 @@ obfuscated
 import re
 
 
-def filter_datum(fields, redaction, message, separator):
-    """
-    Returns the log message obfuscated
-    """
-    my_regex = f'(?<={fields[0]}=).*?(?={separator})|(?<={fields[1]}=).*?(?={separator})'
-    return re.sub(my_regex, redaction, message)
+def filter_datum(fields, reda, mess, sep):
+    """Returns the log message obfuscated"""
+    my_regex = f'(?<={fields[0]}=).*?(?={sep})|(?<={fields[1]}=).*?(?={sep})'
+    return re.sub(my_regex, reda, mess)
