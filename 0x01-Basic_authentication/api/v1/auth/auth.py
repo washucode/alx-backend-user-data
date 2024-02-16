@@ -33,7 +33,6 @@ class Auth:
             return None
         return request.headers['Authorization']
 
-    
     def current_user(self, request=None) -> TypeVar('User'):
         """
         Public method to require current user
