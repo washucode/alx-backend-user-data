@@ -112,3 +112,15 @@ class BasicAuth(Auth):
         curr_user = self.user_object_from_credentials(email, pwd)
 
         return curr_user
+
+    def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
+        """
+        Public method to require authentication
+        """
+        if path is None or excluded_paths is None or len(excluded_paths) == 0:
+            return True
+        if path[-1] != '/':
+            path += '/'
+        if path in excluded_paths:
+            return False
+        return True
