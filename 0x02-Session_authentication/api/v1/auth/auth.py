@@ -8,6 +8,7 @@ from flask import request
 from typing import List, TypeVar
 import os
 
+
 class Auth:
     """
     Manages the API authentication
@@ -38,7 +39,7 @@ class Auth:
         Public method to require current user
         """
         return None
-    
+
     def session_cookie(self, request=None):
         """
         Public method to require session cookie
