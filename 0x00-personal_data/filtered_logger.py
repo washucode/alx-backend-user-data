@@ -80,21 +80,6 @@ def main():
     cursor.execute("SELECT * FROM users;")
     [print(user) for user in cursor]
 
+
 if __name__ == "__main__":
     main()
-
-# if __name__ == '__main__':
-#     # Create a logger
-#     logger = logging.getLogger('user_data')
-#     # Set the log level
-#     logger.setLevel(logging.INFO)
-#     # Create a stream handler
-#     stream_handler = logging.StreamHandler()
-#     # Create a RedactingFormatter
-#     formatter = RedactingFormatter(fields=("name", "email", "phone"))
-#     # Set the formatter
-#     stream_handler.setFormatter(formatter)
-#     # Add the stream handler to the logger
-#     logger.addHandler(stream_handler)
-#     # Create a filter
-#     logger.info("
