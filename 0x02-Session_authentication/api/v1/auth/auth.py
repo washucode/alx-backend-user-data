@@ -40,6 +40,7 @@ class Auth:
         """
         return None
 
+
     def session_cookie(self, request=None):
         """
         Public method to require session cookie
