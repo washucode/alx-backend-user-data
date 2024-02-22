@@ -72,6 +72,15 @@ class RedactingFormatter(logging.Formatter):
                                   record.getMessage(), self.SEPARATOR)
         return super(RedactingFormatter, self).format(record)
 
+
+def main():
+    """Main function"""
+    db = get_db()
+    cursor = db.cursor()
+    cursor.execute("SELECT * FROM users;")
+    [print(user) for user in cursor]
+
+
 # if __name__ == '__main__':
 #     # Create a logger
 #     logger = logging.getLogger('user_data')

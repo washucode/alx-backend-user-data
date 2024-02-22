@@ -2,3 +2,5 @@ user_data.sql
 mysql/
 .env
 .gitignore
+/mysql
+*.pyc
