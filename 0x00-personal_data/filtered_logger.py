@@ -80,6 +80,8 @@ def main():
     cursor.execute("SELECT * FROM users;")
     [print(user) for user in cursor]
 
+if __name__ == "__main__":
+    main()
 
 # if __name__ == '__main__':
 #     # Create a logger
